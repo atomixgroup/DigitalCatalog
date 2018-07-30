@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ir.codetower.samanshiri.CustomViews.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="روش های انتخاب عکس : "
+        android:textSize="18sp"
+
+        app:fontName="yekan" />
+
+    <ir.codetower.samanshiri.CustomViews.CustomButton
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+
+        android:textSize="20sp"
+        app:btnFontName="yekan"
+        tools:text="test" />
+
+    <ir.codetower.samanshiri.CustomViews.CustomButton
+        android:id="@+id/sd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+        android:textSize="20sp"
+        app:btnFontName="yekan"
+        tools:text="test" />
+
+    <ir.codetower.samanshiri.CustomViews.CustomButton
+        android:id="@+id/aparat"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+        android:text="ویدیو آپارات"
+        android:textSize="20sp"
+        app:btnFontName="yekan"
+        tools:text="test" />
+    <EditText
+        android:id="@+id/edt_aparat"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="کد آپارات"
+        android:padding="10dp" />
+
+</LinearLayout>

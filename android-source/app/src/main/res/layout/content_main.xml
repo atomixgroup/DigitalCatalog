@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ir.codetower.samanshiri.Activities.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:id="@+id/tablayout"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#fff">
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="دوازدهم"
+                    android:id="@+id/twelve"
+                    android:textColor="@color/colorPrimary"
+                    app:fontName="yekan"/>
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="یازدهم"
+                    android:id="@+id/eleven"
+                    android:textColor="@color/colorPrimary"
+                    app:fontName="yekan"/>
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="دهم"
+                    android:id="@+id/ten"
+                    app:fontName="yekan"/>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tablayout"
+                android:background="@color/colorPrimary"/>
+            <android.support.v4.view.ViewPager
+
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/indicator"
+                >
+
+            </android.support.v4.view.ViewPager>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/relatedTitle"
+                android:layout_alignBottom="@id/relatedTitle"
+                android:layout_alignParentEnd="true"
+
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/slider"
+                android:background="#ecf0f1" />
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:layout_below="@id/slider"
+                android:id="@+id/seenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:text="‍‍پربازدیدترین ها"
+                android:textColor="#000"
+                app:fontName="yekan" />
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/seen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seenTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="150dp"
+                android:padding="10dp">
+
+            </android.support.v7.widget.RecyclerView>
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+
+                android:id="@+id/seenNoItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/relatedTitle"
+                android:layout_alignEnd="@+id/seen"
+                android:layout_alignLeft="@+id/seen"
+                android:layout_alignRight="@+id/seen"
+                android:layout_alignStart="@+id/seen"
+                android:layout_alignTop="@+id/seen"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="مطلبی برای این موضوع ثبت نشده است"
+                app:fontName="yekan" />
+
+
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:layout_below="@id/seen"
+                android:id="@+id/relatedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:text="بروزترین مطالب"
+                android:textColor="#000"
+                app:fontName="yekan" />
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/related"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relatedTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="150dp"
+                android:padding="10dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+
+                android:id="@+id/relatedNoItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_above="@+id/productTitle"
+                android:layout_alignEnd="@+id/related"
+                android:layout_alignLeft="@+id/related"
+                android:layout_alignRight="@+id/related"
+                android:layout_alignStart="@+id/related"
+                android:layout_alignTop="@+id/related"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="مطلبی برای این موضوع ثبت نشده است"
+                app:fontName="yekan" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignBottom="@id/productTitle"
+                android:layout_alignTop="@+id/productTitle"
+                android:background="#ecf0f1" />
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:id="@+id/productTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/related"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:text="کل محصولات"
+                android:textColor="#000"
+                android:padding="5dp"
+                app:fontName="yekan" />
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/all_products"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/productTitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:minHeight="150dp"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:id="@+id/productNoItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/all_products"
+                android:layout_alignEnd="@+id/imageView4"
+                android:layout_alignLeft="@+id/all_products"
+                android:layout_alignRight="@+id/imageView4"
+                android:layout_alignStart="@+id/all_products"
+                android:layout_alignTop="@+id/all_products"
+                android:gravity="center"
+                app:fontName="yekan"
+
+                android:text="محصولی برای این موضوع ثبت نشده است"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignBottom="@id/categoriesTitle"
+                android:layout_alignTop="@+id/categoriesTitle"
+                android:background="#ecf0f1" />
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:id="@+id/categoriesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/all_products"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:text="گروه بندی"
+                android:padding="5dp"
+                android:textColor="#000"
+                app:fontName="yekan" />
+
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:id="@+id/viewCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@+id/categories"
+                android:layout_alignLeft="@+id/categories"
+                android:layout_alignStart="@+id/categories"
+                android:layout_alignTop="@+id/imageView5"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="20dp"
+                app:fontName="yekan"
+                android:textSize="20sp"
+                 />
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/categories"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/categoriesTitle"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:minHeight="150dp"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <ir.codetower.samanshiri.CustomViews.CustomTextView
+                android:id="@+id/categoryNoItem"
+                app:fontName="yekan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/categories"
+                android:layout_alignEnd="@+id/categories"
+                android:layout_alignLeft="@+id/categories"
+                android:layout_alignRight="@+id/categories"
+                android:layout_alignStart="@+id/categories"
+                android:layout_alignTop="@+id/categories"
+                android:gravity="center"
+                android:text="هیچ گروه بندی ثبت نشده است"
+                android:visibility="gone" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_below="@id/categories"/>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/top_shadow"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#fff">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ir.codetower.samanshiri.CustomViews.CustomCircleButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_bottom1"
+                    android:layout_height="wrap_content"
+
+                    >
+                </ir.codetower.samanshiri.CustomViews.CustomCircleButton>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ir.codetower.samanshiri.CustomViews.CustomCircleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_bottom2"
+
+                    >
+                </ir.codetower.samanshiri.CustomViews.CustomCircleButton>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ir.codetower.samanshiri.CustomViews.CustomCircleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_bottom3"
+
+                    >
+                </ir.codetower.samanshiri.CustomViews.CustomCircleButton>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ir.codetower.samanshiri.CustomViews.CustomCircleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_bottom4"
+                    >
+                </ir.codetower.samanshiri.CustomViews.CustomCircleButton>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

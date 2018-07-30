@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.rambler.libs.swipe_layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    app:swipe_enabled="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!--CENTER. app:gravity="center" - is default value -->
+    <LinearLayout
+        android:id="@+id/item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/item_load"
+                    style="@style/SpinKitView.Large.Wave"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    app:SpinKit_Color="@color/colorPrimary"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+                <ir.codetower.samanshiri.CustomViews.RoundRectCornerImageView
+                    android:id="@+id/item_image"
+                    app:round="15"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/item_edit"
+                        android:visibility="invisible"
+                        android:tint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_edit_icon"/>
+                    <ir.codetower.samanshiri.CustomViews.CustomTextView
+                        android:id="@+id/item_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        app:fontName="yekan"
+                        tools:text="عنوان تستی" />
+                </LinearLayout>
+
+
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:id="@+id/item_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:maxLines="6"
+                    android:gravity="right"
+                    android:textColor="#000"
+                    android:textSize="11sp"
+                    app:fontName="irsans"
+                    tools:text="عنوان تستی" />
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:id="@+id/seenCount"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:maxLines="6"
+                    android:gravity="right"
+                    android:textColor="#000"
+                    android:textSize="11sp"
+                    app:fontName="irsans"
+                    tools:text="آمار بازدید :" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="#e2e2e2"/>
+    </LinearLayout>
+
+    <!--RIGHT-->
+    <RelativeLayout
+        android:id="@+id/item_remove"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0000"
+        android:paddingBottom="10dp"
+        app:bring_to_clamp="150dp"
+        app:clamp="self"
+        app:gravity="right"
+        app:sticky="100dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/removeIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            app:srcCompat="@drawable/ic_remove" />
+
+        <ir.codetower.samanshiri.CustomViews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/removeIcon"
+            android:layout_alignLeft="@+id/removeIcon"
+            android:layout_alignRight="@+id/removeIcon"
+            android:layout_alignStart="@+id/removeIcon"
+            android:layout_below="@+id/removeIcon"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:text="حذف"
+            app:fontName="ojan" />
+    </RelativeLayout>
+
+
+</ru.rambler.libs.swipe_layout.SwipeLayout>
+
+

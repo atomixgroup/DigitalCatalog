@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "774190205464",
+    "firebase_url": "https://samanshiri-5ce27.firebaseio.com",
+    "project_id": "samanshiri-5ce27",
+    "storage_bucket": "samanshiri-5ce27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774190205464:android:9f6c164af4de0c14",
+        "android_client_info": {
+          "package_name": "ir.codetower.samanshiri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774190205464-vl1fqkki6udvd6d6a61ifu0t9p1f9n66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo0K_dHEXsi2NmFcMUcmJZAZOeHbKJweI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

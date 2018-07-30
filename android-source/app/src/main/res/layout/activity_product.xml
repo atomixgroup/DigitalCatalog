@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.ProductActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/colorSecondary"
+
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="parallax">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <include android:visibility="gone" android:id="@+id/video_layout" android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginBottom="60dp" layout="@layout/activity_video_player"/>
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/placeholder"
+                            tools:ignore="ContentDescription" />
+                        <!--<include layout="@layout/activity_video_player"/>-->
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="#99F5F5F5"
+                        android:gravity="right"
+                        android:weightSum="1"
+                        tools:ignore="RtlHardcoded">
+
+
+                        <ir.codetower.samanshiri.CustomViews.CustomTextView
+
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:shadowColor="#666"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="2"
+
+                            android:textColor="#000"
+                            android:textSize="25sp"
+                            app:fontName="irsans"
+
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/remove"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/ic_remove" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/ic_edit_icon" />
+
+                        <ir.codetower.samanshiri.CustomViews.CustomTextView
+                            android:id="@+id/head_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            app:fontName="yekan"
+                            tools:text="test" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/back"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_gravity="center"
+
+                            app:srcCompat="@drawable/ic_arrow" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.Toolbar>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/primary_spin"
+                    style="@style/SpinKitView.Large.Wave"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_above="@+id/linearLayout4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    app:SpinKit_Color="@color/colorPrimary" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/image"
+            android:layout_margin="5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:lineSpacingExtra="5dp"
+                    app:fontName="yekan" />
+
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/albumLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <ir.codetower.samanshiri.CustomViews.CustomTextView
+                        android:id="@+id/albumText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="آلبوم"
+                        android:textSize="20sp"
+                        app:fontName="yekan" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:id="@+id/album_list"
+                            android:layout_height="match_parent">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/section4"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/smile_rating"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp" />
+
+                    <ir.codetower.samanshiri.CustomViews.CustomTextView
+                        android:id="@+id/average"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        app:fontName="yekan" />
+
+                    <ir.codetower.samanshiri.CustomViews.CustomButton
+                        android:id="@+id/btn_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ارسال امتیاز"
+                        app:btnFontName="yekan" />
+
+                </LinearLayout>
+
+                <ir.codetower.samanshiri.CustomViews.CustomButton
+                    android:id="@+id/btn_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/btn_cart_backgrond"
+                    android:text="اظافه کردن به سبد"
+                    android:textColor="#fff"
+                    app:btnFontName="yekan" />
+
+                <ir.codetower.samanshiri.CustomViews.CustomButton
+                    android:id="@+id/btn_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:text="نظرات دوستان"
+                    android:textColor="#fff"
+                    app:btnFontName="yekan" />
+                <ir.codetower.samanshiri.CustomViews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontName="yekan"
+                    android:layout_margin="10dp"
+                    android:id="@+id/seenCount"/>
+                <LinearLayout
+                    android:id="@+id/share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_share_black_24dp" />
+
+                    <ir.codetower.samanshiri.CustomViews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="معرفی نرم افزار به دوستانتان "
+                        android:textColor="#4FC3F7"
+                        app:fontName="yekan" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_favorite"
+            android:visibility="visible"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_favorite"
+            app:backgroundTint="#2c3e50"
+            app:tint="#ecf0f1"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/touchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/touchBack"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="right"
+            android:tint="#fff"
+            app:srcCompat="@drawable/ic_arrow" />
+
+        <ir.codetower.samanshiri.CustomViews.TouchImageView
+            android:id="@+id/touchImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+
+    <ir.codetower.samanshiri.CustomViews.ShoppingCartView
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_cart"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/touchLayout"
+        android:layout_toRightOf="@+id/touchLayout"
+        app:elevation="3dp">
+    </ir.codetower.samanshiri.CustomViews.ShoppingCartView>
+
+</RelativeLayout>

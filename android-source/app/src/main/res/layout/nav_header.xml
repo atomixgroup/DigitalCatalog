@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:id="@+id/head_back"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@drawable/ic_launcher" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <ir.codetower.samanshiri.CustomViews.CustomTextView
+            android:id="@+id/statistics"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:padding="10dp"
+            android:textColor="#ff0000"
+            android:layout_marginRight="10dp"
+            android:shadowRadius="1"
+            android:layout_gravity="right"
+            android:gravity="right"
+            app:fontName="yekan"
+            tools:text="test" />
+    </LinearLayout>
+
+    <ir.codetower.samanshiri.CustomViews.CustomTextView
+        app:fontName="yekan"
+        android:id="@+id/app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:shadowColor="#666"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:shadowDx="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <ir.codetower.samanshiri.CustomViews.CustomTextView
+        app:fontName="yekan"
+        android:id="@+id/app_description"
+        android:layout_width="wrap_content"
+        android:shadowColor="#666"
+        android:shadowDy="1"
+        android:lineSpacingExtra="6dp"
+        android:shadowRadius="1"
+        android:shadowDx="1"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

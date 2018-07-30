@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/section4"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ir.codetower.samanshiri.CustomViews.CustomTextView
+        android:layout_width="0dp"
+        android:textColor="#666"
+        android:layout_weight=".7"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_message"
+        android:textSize="18sp"
+        tools:text="مبلغ ۲۰۰۰ تومان به حساب شما واریط شده است واریز کننده رامین جلیلی"
+        app:fontName="yekan"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".3"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ir.codetower.samanshiri.CustomViews.CustomButton
+            android:background="#95a5a6"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_check"
+            app:btnFontName="yekan"
+            android:gravity="center"
+            android:text="بررسی نشده"
+            android:layout_margin="5dp"
+            android:layout_height="32dp" />
+        <ir.codetower.samanshiri.CustomViews.CustomButton
+            android:background="#95a5a6"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_detail"
+            android:gravity="center"
+            app:btnFontName="yekan"
+            android:text="جزئیات"
+            android:layout_margin="5dp"
+            android:layout_height="32dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/menu_message_box"
+            android:icon="@drawable/ic_message"
+            android:title="پیغام های دریافتی" />
+        <item
+            android:id="@+id/menu_about_us"
+            android:icon="@drawable/ic_info"
+            android:title="درباره موسسه" />
+        <item
+            android:id="@+id/menu_favorite"
+            android:icon="@drawable/ic_ribbon"
+            app:iconTint="#000"
+            android:title="نشان شده ها" />
+        <item
+            android:id="@+id/menu_contact_us"
+            android:icon="@drawable/ic_support"
+            android:title="ارتباط با موسسه" />
+        <item
+            android:id="@+id/menu_about_designer"
+            android:icon="@drawable/ic_design"
+            android:title="درباره شرکت طراح" />
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="تنظیمات" />
+
+        <item
+            android:id="@+id/menu_login"
+            android:icon="@drawable/ic_login"
+            android:title="ورود برای مدیریت" />
+        <item
+            android:id="@+id/menu_logout"
+            android:icon="@drawable/ic_login"
+            android:title="خروج از مدیریت" />
+
+        <item
+            android:id="@+id/menu_exit"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="خروج از برنامه" />
+    </group>
+
+
+
+</menu>

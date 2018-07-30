@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_height="40dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/circle_drawable_shadow" />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/circle"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/circle_drawable_red" />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:id="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:tint="#FFF"
+         />
+    <RelativeLayout
+        android:id="@+id/cart_notif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

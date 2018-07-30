@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="18"
+        android:adjustViewBounds="true"
+        android:maxHeight="64dp"
+        android:scaleType="center"
+
+        />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:paddingTop="10dp"
+        android:layout_weight="80"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        tools:text="rainman jalili" />
+
+
+</LinearLayout>

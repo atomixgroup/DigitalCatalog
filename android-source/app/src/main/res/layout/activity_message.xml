@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ir.codetower.samanshiri.Activities.MessageActivity">
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_notif"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </android.support.v7.widget.RecyclerView>
+    <ir.codetower.samanshiri.CustomViews.CustomButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:btnFontName="yekan"
+        android:id="@+id/send_notif"
+        android:layout_alignParentBottom="true"
+        android:text="ارسال نوتیفیکیشن"/>
+</RelativeLayout>
